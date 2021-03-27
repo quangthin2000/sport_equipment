@@ -8,6 +8,9 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
         .anh {
             display: block;
             margin-left: auto;
@@ -18,7 +21,7 @@
         #menu {
             height: 40px;
             background: url(Images/blue.png) repeat;
-            padding: 1px;
+            position: center fixed;
         }
 
         div {
@@ -61,12 +64,18 @@
             height: 40px;
         }
 
-        .href-menu {
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 20px;
+        a.href-menu {
+            font-size: 18px;
             text-decoration: none;
             padding-left: 15px;
+        }
+
+        a.href-menu:link, a.href-menu:visited {
+            color: white;
+        }
+
+        a.href-menu:hover {
+            color: red;
         }
 
         #dangnhap {
@@ -89,12 +98,13 @@
                 </ul>
             </div>
             <div id="dangnhap">
-                <ul>
+                <ul class="menungang">
                     <li class="menu1"><a class="href-menu" href="#" runat="server">Đăng ký</a></li>
                     <li class="menu1"><a class="href-menu" href="#" runat="server">Đăng nhập</a></li>
                 </ul>
             </div>
         </div>
     </div>
+
 </body>
 </html>
