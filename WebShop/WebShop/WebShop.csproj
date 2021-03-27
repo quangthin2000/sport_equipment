@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98A33F4E-3E1F-4114-A7AA-8D5503A1B5F6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebShop</RootNamespace>
+    <AssemblyName>WebShop</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.aspx" />
+    <Content Include="cms\Admin\AdminLoadControl.ascx" />
+    <Content Include="cms\Admin\css\add.jpg" />
+    <Content Include="cms\Admin\css\check.jpg" />
+    <Content Include="cms\Admin\css\cssAdmin.css" />
+    <Content Include="cms\Admin\css\cssChiTietDonHang.css" />
+    <Content Include="cms\Admin\css\cssDangNhap.css" />
+    <Content Include="cms\Admin\css\delete.jpg" />
+    <Content Include="cms\Admin\css\edit.jpg" />
+    <Content Include="cms\Admin\css\expend.jpg" />
+    <Content Include="cms\Admin\css\Picture3.png" />
+    <Content Include="cms\Admin\css\unCheck.jpg" />
+    <Content Include="cms\Admin\css\view.png" />
+    <Content Include="cms\Admin\js\jquery-3.1.1.min.js" />
+    <Content Include="cms\Admin\KhachHang\KhachHangLoadControl.ascx" />
+    <Content Include="cms\Admin\KhachHang\KhachHang_HienThi.ascx" />
+    <Content Include="cms\Admin\Menu\Ajax\Menu.aspx" />
+    <Content Include="cms\Admin\Menu\MenuLoadControl.ascx" />
+    <Content Include="cms\Admin\Menu\Menu_HienThi.ascx" />
+    <Content Include="cms\Admin\Menu\Menu_ThemMoi.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLyDanhMuc\Ajax\DanhMuc.aspx" />
+    <Content Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMuc_HienThi.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMuc_ThemMoi.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLyDonHang\Ajax\DonHang.aspx" />
+    <Content Include="cms\Admin\SanPham\QuanLyDonHang\ChiTietDonHang.aspx" />
+    <Content Include="cms\Admin\SanPham\QuanLyDonHang\DonHangLoadControl.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLyDonHang\DonHang_HienThi.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLyNhomSanPham\Ajax\NhomSanPham.aspx" />
+    <Content Include="cms\Admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLyNhomSanPham\NhomSanPham_HienThi.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLyNhomSanPham\NhomSanPham_ThemMoi.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLySanPham\Ajax\SanPham.aspx" />
+    <Content Include="cms\Admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLySanPham\SanPham_HienThi.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLySanPham\SanPham_ThemMoi.ascx" />
+    <Content Include="cms\Admin\SanPham\SanPhamLoadControl.ascx" />
+    <Content Include="cms\Admin\TaiKhoan\Ajax\TaiKhoan.aspx" />
+    <Content Include="cms\Admin\TaiKhoan\TaiKhoanLoadControl.ascx" />
+    <Content Include="cms\Admin\TaiKhoan\TaiKhoan_HienThi.ascx" />
+    <Content Include="cms\Admin\TaiKhoan\TaiKhoan_ThemMoi.ascx" />
+    <Content Include="Images\blue.png" />
+    <Content Include="Images\dau1.png" />
+    <Content Include="Index.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Database\SQLDatabase.cs" />
+    <Content Include="App_Code\Database\SanPham.cs" />
+    <Content Include="App_Code\Database\ChatLieu.cs" />
+    <Content Include="App_Code\Database\ChiTietDonDatHang.cs" />
+    <Content Include="App_Code\Database\ChiTietDonHang.cs" />
+    <Content Include="App_Code\Database\DangKy.cs" />
+    <Content Include="App_Code\Database\DanhMuc.cs" />
+    <Content Include="App_Code\Database\DanhMucTin.cs" />
+    <Content Include="App_Code\Database\DonDatHang.cs" />
+    <Content Include="App_Code\Database\Global.cs" />
+    <Content Include="App_Code\Database\HoaDon.cs" />
+    <Content Include="App_Code\Database\KhachHang.cs" />
+    <Content Include="App_Code\Database\LuotDauGia.cs" />
+    <Content Include="App_Code\Database\Mau.cs" />
+    <Content Include="App_Code\Database\Menu.cs" />
+    <Content Include="App_Code\Database\NhanVien.cs" />
+    <Content Include="App_Code\Database\NhomQuangCao.cs" />
+    <Content Include="App_Code\Database\NhomSanPham.cs" />
+    <Content Include="App_Code\Database\PhienDauGia.cs" />
+    <Content Include="App_Code\Database\QuangCao.cs" />
+    <Content Include="App_Code\Database\QuyenDangNhap.cs" />
+    <Content Include="App_Code\Database\Size.cs" />
+    <Content Include="App_Code\Database\TinTuc.cs" />
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\AdminLoadControl.ascx.cs">
+      <DependentUpon>AdminLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\AdminLoadControl.ascx.designer.cs">
+      <DependentUpon>AdminLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\KhachHang\KhachHangLoadControl.ascx.cs">
+      <DependentUpon>KhachHangLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\KhachHang\KhachHang_HienThi.ascx.cs">
+      <DependentUpon>KhachHang_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\Menu\Ajax\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\Menu\MenuLoadControl.ascx.cs">
+      <DependentUpon>MenuLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\Menu\Menu_HienThi.ascx.cs">
+      <DependentUpon>Menu_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\Menu\Menu_ThemMoi.ascx.cs">
+      <DependentUpon>Menu_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDanhMuc\Ajax\DanhMuc.aspx.cs">
+      <DependentUpon>DanhMuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx.cs">
+      <DependentUpon>DanhMucLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx.designer.cs">
+      <DependentUpon>DanhMucLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMuc_HienThi.ascx.cs">
+      <DependentUpon>DanhMuc_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMuc_ThemMoi.ascx.cs">
+      <DependentUpon>DanhMuc_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDonHang\Ajax\DonHang.aspx.cs">
+      <DependentUpon>DonHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDonHang\ChiTietDonHang.aspx.cs">
+      <DependentUpon>ChiTietDonHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDonHang\DonHangLoadControl.ascx.cs">
+      <DependentUpon>DonHangLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDonHang\DonHangLoadControl.ascx.designer.cs">
+      <DependentUpon>DonHangLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDonHang\DonHang_HienThi.ascx.cs">
+      <DependentUpon>DonHang_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyNhomSanPham\Ajax\NhomSanPham.aspx.cs">
+      <DependentUpon>NhomSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx.cs">
+      <DependentUpon>NhomLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx.designer.cs">
+      <DependentUpon>NhomLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyNhomSanPham\NhomSanPham_HienThi.ascx.cs">
+      <DependentUpon>NhomSanPham_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyNhomSanPham\NhomSanPham_ThemMoi.ascx.cs">
+      <DependentUpon>NhomSanPham_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLySanPham\Ajax\SanPham.aspx.cs">
+      <DependentUpon>SanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx.cs">
+      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx.designer.cs">
+      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLySanPham\SanPham_HienThi.ascx.cs">
+      <DependentUpon>SanPham_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLySanPham\SanPham_ThemMoi.ascx.cs">
+      <DependentUpon>SanPham_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\SanPhamLoadControl.ascx.cs">
+      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\SanPhamLoadControl.ascx.designer.cs">
+      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\TaiKhoan\Ajax\TaiKhoan.aspx.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\TaiKhoan\TaiKhoanLoadControl.ascx.cs">
+      <DependentUpon>TaiKhoanLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\TaiKhoan\TaiKhoan_HienThi.ascx.cs">
+      <DependentUpon>TaiKhoan_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\TaiKhoan\TaiKhoan_ThemMoi.ascx.cs">
+      <DependentUpon>TaiKhoan_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index_Homepage.Master.cs">
+      <DependentUpon>Index_Homepage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index_Homepage.Master.designer.cs">
+      <DependentUpon>Index_Homepage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Index_Homepage.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58555</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58555/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
