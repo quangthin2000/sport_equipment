@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +8,7 @@ using System.Data;
 
 public partial class cms_admin_SanPham_QuanLyNhomSanPham_NhomSanPham_HienThi : System.Web.UI.UserControl
 {
-    protected void Page_Load(object sender, EventArgs e)
+    /*protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
             LayNhomSanPham();
@@ -39,5 +39,5 @@ public partial class cms_admin_SanPham_QuanLyNhomSanPham_NhomSanPham_HienThi : S
 ";
         }
 
-    }
-}*/
+    }*/
+}

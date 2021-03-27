@@ -30,9 +30,9 @@
                 <ul>
                     <li><a href="/Admin.aspx" title="Trang Chủ">Trang Chủ</a></li>
                     <li><a href="/Admin.aspx?modul=SanPham" title="Sản Phẩm">Sản Phẩm</a></li>
-                    <li><a href="/Admin.aspx?modul=Menu" title="Menu">Menu</a></li>
                     <li><a href="/Admin.aspx?modul=KhachHang" title="Khách Hàng">Khách Hàng</a></li>
                     <li><a href="/Admin.aspx?modul=TaiKhoan" title="Tài Khoản">Tài Khoản</a></li>
+                    <li><a href="/Admin.aspx?modul=Menu" title="Menu">Menu</a></li>
                 </ul>
             </div>
 

@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +10,7 @@ using System.Data.OleDb;
 
 public partial class cms_admin_SanPham_QuanLyDanhMuc_DanhMuc_ThemMoi : System.Web.UI.UserControl
 {
-    private string thaotac = "";
+    /*private string thaotac = "";
     private string id = "";//lấy id của danh mục cần chỉnh sửa
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -152,5 +152,5 @@ public partial class cms_admin_SanPham_QuanLyDanhMuc_DanhMuc_ThemMoi : System.We
     protected void btHuy_Click(object sender, EventArgs e)
     {
         ResetControl();
-    }
-}*/
+    }*/
+}

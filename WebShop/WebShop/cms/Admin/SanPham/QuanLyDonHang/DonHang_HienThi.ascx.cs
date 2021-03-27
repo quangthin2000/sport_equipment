@@ -1,9 +1,9 @@
-﻿/*using System;
+﻿using System;
 using System.Data;
 
 public partial class cms_admin_SanPham_QuanLyDonHang_DonHang_HienThi : System.Web.UI.UserControl
 {
-    protected void Page_Load(object sender, EventArgs e)
+    /*protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
             LayDonHang();
@@ -56,5 +56,5 @@ public partial class cms_admin_SanPham_QuanLyDonHang_DonHang_HienThi : System.We
         }
 
         return s;
-    }
-}*/
+    }*/
+}
