@@ -1,5 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="TaiKhoanLoadControl.ascx.cs" 
-    Inherits="cms_admin_TaiKhoan_TaiKhoanLoadControl" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TaiKhoanLoadControl.ascx.cs" Inherits="WebShop.cms.Admin.TaiKhoan.TaiKhoanLoadControl" %>
 <div class="container">
     <div style="clear:both;height:20px"></div>
     <div class="cotTrai">

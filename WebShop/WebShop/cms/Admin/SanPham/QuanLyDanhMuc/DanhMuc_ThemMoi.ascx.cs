@@ -6,11 +6,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.OleDb;
+using WebShop;
+using WebShop.cms;
 
 
 public partial class cms_admin_SanPham_QuanLyDanhMuc_DanhMuc_ThemMoi : System.Web.UI.UserControl
 {
-    /*private string thaotac = "";
+    private string thaotac = "";
     private string id = "";//lấy id của danh mục cần chỉnh sửa
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -36,7 +38,7 @@ public partial class cms_admin_SanPham_QuanLyDanhMuc_DanhMuc_ThemMoi : System.We
             cbThemNhieuDanhMuc.Visible = false;
 
             DataTable dt = new DataTable();
-            dt = emdepvn.DanhMuc.Thongtin_Danhmuc_by_id(id);
+            dt = WebShop.DanhMuc.Thongtin_Danhmuc_by_id(id);
             if(dt.Rows.Count>0)
             {
                 ddlDanhMucCha.SelectedValue = dt.Rows[0]["MaDMCha"].ToString();
@@ -58,7 +60,7 @@ public partial class cms_admin_SanPham_QuanLyDanhMuc_DanhMuc_ThemMoi : System.We
     private void LayDanhMucCha()
     {
         DataTable dt = new DataTable();
-        dt = emdepvn.DanhMuc.Thongtin_Danhmuc_by_MaDMCha("0");
+        dt = WebShop.DanhMuc.Thongtin_Danhmuc_by_MaDMCha("0");
         ddlDanhMucCha.Items.Clear();
 
         ddlDanhMucCha.Items.Add(new ListItem("Danh mục gốc","0"));
@@ -72,7 +74,7 @@ public partial class cms_admin_SanPham_QuanLyDanhMuc_DanhMuc_ThemMoi : System.We
     private void LayDanhMucCon(string MaDMCha, string KhoangCach)
     {
         DataTable dt = new DataTable();
-        dt = emdepvn.DanhMuc.Thongtin_Danhmuc_by_MaDMCha(MaDMCha);
+        dt = WebShop.DanhMuc.Thongtin_Danhmuc_by_MaDMCha(MaDMCha);
 
         for (int i = 0; i < dt.Rows.Count; i++)
         {
@@ -152,5 +154,5 @@ public partial class cms_admin_SanPham_QuanLyDanhMuc_DanhMuc_ThemMoi : System.We
     protected void btHuy_Click(object sender, EventArgs e)
     {
         ResetControl();
-    }*/
+    }
 }
