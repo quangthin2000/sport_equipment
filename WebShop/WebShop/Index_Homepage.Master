@@ -19,8 +19,7 @@
 
         #menu {
             height: 40px;
-            background: url(Images/blue.png) repeat;
-            display: flex;
+            background: url(../Images/blue.png) repeat;
             position: center;
         }
 
@@ -83,6 +82,9 @@
             height: 40px;
             width: 250px;
         }
+         .content {
+             padding-top: 5px;
+         }
     </style>
 </head>
 <body>
@@ -101,10 +103,16 @@
             <div id="dangnhap">
                 <ul class="menungang">
                     <li class="menu1"><a class="href-menu" href="#" runat="server">Đăng ký</a></li>
-                    <li class="menu1"><a class="href-menu" href="~/Website/Login.aspx" runat="server">Đăng nhập</a></li>
+                    <li class="menu1"><a class="href-menu" href="./Website/Login.aspx" runat="server">Đăng nhập</a></li>
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="content">
+        <asp:ContentPlaceHolder ID="Content1" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:PlaceHolder ID="Place1" runat="server"></asp:PlaceHolder>
+        <a>Chả có gì</a>&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
     </form>
 </body>

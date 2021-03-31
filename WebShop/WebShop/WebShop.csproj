@@ -139,7 +139,6 @@
     <Content Include="cms\Admin\TaiKhoan\TaiKhoanLoadControl.ascx" />
     <Content Include="cms\Admin\TaiKhoan\TaiKhoan_HienThi.ascx" />
     <Content Include="cms\Admin\TaiKhoan\TaiKhoan_ThemMoi.ascx" />
-    <Content Include="Default.aspx" />
     <Content Include="Images\a.png" />
     <Content Include="Images\blue.png" />
     <Content Include="Images\dau1.png" />
@@ -265,13 +264,6 @@
       <DependentUpon>TaiKhoan_ThemMoi.ascx</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Website\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
