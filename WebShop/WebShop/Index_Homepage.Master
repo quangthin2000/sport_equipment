@@ -12,16 +12,16 @@
             font-family: 'Times New Roman', Times, serif;
         }
         .anh {
+            margin: auto;
+            position: center;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 80%;
         }
 
         #menu {
             height: 40px;
             background: url(Images/blue.png) repeat;
-            position: center fixed;
+            display: flex;
+            position: center;
         }
 
         div {
@@ -81,18 +81,19 @@
         #dangnhap {
             float: right;
             height: 40px;
-            width: 300px;
+            width: 250px;
         }
     </style>
 </head>
 <body>
-    <asp:Image ID="logo" ImageUrl="~/Images/dau1.png" runat="server" Height="100px" CssClass="anh" />
+    <form id="form1" runat="server">
+    <asp:Image ID="logo" ImageUrl="~/Images/a.png" runat="server" Height="100px" CssClass="anh" />
     <div id="menu">
         <div class="contener">
             <div id="menutrai">
                 <ul class="menungang">
-                    <li class="menu1"><a class="href-menu" href="#" runat="server">TRANG CHỦ</a></li>
-                    <li class="menu1"><a class="href-menu" href="#" runat="server">GIỚI THIỆU</a></li>
+                    <li class="menu1"><a class="href-menu" href="./Website/Index.aspx" runat="server">TRANG CHỦ</a></li>
+                    <li class="menu1"><a class="href-menu" href="#" target="_blank" runat="server">GIỚI THIỆU</a></li>
                     <li class="menu1"><a class="href-menu" href="#" runat="server">SẢN PHẨM</a></li>
                     <li class="menu1"><a class="href-menu" href="#" runat="server">THANH TOÁN</a></li>
                 </ul>
@@ -100,11 +101,11 @@
             <div id="dangnhap">
                 <ul class="menungang">
                     <li class="menu1"><a class="href-menu" href="#" runat="server">Đăng ký</a></li>
-                    <li class="menu1"><a class="href-menu" href="#" runat="server">Đăng nhập</a></li>
+                    <li class="menu1"><a class="href-menu" href="~/Website/Login.aspx" runat="server">Đăng nhập</a></li>
                 </ul>
             </div>
         </div>
     </div>
-
+    </form>
 </body>
 </html>

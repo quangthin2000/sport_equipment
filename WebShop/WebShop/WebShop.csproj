@@ -139,9 +139,14 @@
     <Content Include="cms\Admin\TaiKhoan\TaiKhoanLoadControl.ascx" />
     <Content Include="cms\Admin\TaiKhoan\TaiKhoan_HienThi.ascx" />
     <Content Include="cms\Admin\TaiKhoan\TaiKhoan_ThemMoi.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\a.png" />
     <Content Include="Images\blue.png" />
     <Content Include="Images\dau1.png" />
-    <Content Include="Index.aspx" />
+    <Content Include="Images\Picture3.png" />
+    <Content Include="Images\trag.png" />
+    <Content Include="Website\Index.aspx" />
+    <Content Include="Website\Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -260,11 +265,18 @@
       <DependentUpon>TaiKhoan_ThemMoi.ascx</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc.cs" />
-    <Compile Include="Index.aspx.cs">
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Website\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Index.aspx.designer.cs">
+    <Compile Include="Website\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index_Homepage.Master.cs">
@@ -273,6 +285,13 @@
     </Compile>
     <Compile Include="Index_Homepage.Master.designer.cs">
       <DependentUpon>Index_Homepage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Website\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Website\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
