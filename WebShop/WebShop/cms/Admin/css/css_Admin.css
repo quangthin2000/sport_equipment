@@ -30,15 +30,15 @@ a:hover{color:#f75d75}
 .cotPhai{float:right;width:80%;box-sizing:border-box;border:solid 1px #dfdfdf;min-height:464px;}
 
 /*Css cho menu quản lý trái*/
-.cotTrai .head{background:#f9f9f9;padding:10px;font-weight:bold;border-top:solid 1px #dfdfdf;border-bottom:solid 1px #dfdfdf}
-.cotTrai .head:first-child{border-top:none}
+.cotTrai .head{background:#1D3C5A;padding:10px;color:#fff;font-weight:bold;border-top:solid 1px #dfdfdf;border-bottom:solid 1px #dfdfdf}
+.cotTrai .head:first-child{border-top:none;color:#fff}
 .cotTrai ul li{padding:5px 0}
 .cotTrai ul li a.current,
 .cotTrai ul li a:hover{color:#ff006e}
 
 /*Cột phải*/
-.cotPhai .head{background:#f9f9f9;padding:10px;font-weight:bold;border-top:solid 1px #dfdfdf;border-bottom:solid 1px #dfdfdf}
-.cotPhai .head:first-child{border-top:none}
+.cotPhai .head{background:#1D3C5A;padding:10px;font-weight:bold;border-top:solid 1px #dfdfdf;border-bottom:solid 1px #dfdfdf}
+.cotPhai .head:first-child{border-top:none;color:#fff}
 
 /*css Khu thêm mới*/
 .FormThemMoi{padding:15px}
@@ -52,7 +52,7 @@ a:hover{color:#f75d75}
 .FormThemMoi .btThemMoi,
 .FormThemMoi .btHuy{border:0 ;background:#1D3C5A;cursor:pointer;padding:10px 20px;color:#fff;font-weight:bold}
 .FormThemMoi .btHuy{background:#bbb;margin-left:10px}
-.FormThemMoi .thongBaoTaoThanhCong{color:#ff006e;font-size:16px;padding-bottom:20px;text-align:center;font-weight:bold}
+.FormThemMoi .thongBaoTaoThanhCong{color:#1D3C5A;font-size:16px;padding-bottom:20px;text-align:center;font-weight:bold}
 .FormThemMoi .anhDaiDien{max-width:200px;max-height:120px;}
 
 /*CSS trang hiển thị các danh mục sản phẩm, danh mục tin tức*/
@@ -81,7 +81,7 @@ table.tbDanhMuc .cotAnh{position:relative;z-index:1}
 table.tbDanhMuc .cotAnh .anhDaiDien{max-width:40px;max-height:40px}
 table.tbDanhMuc .cotAnh .anhDaiDienHover{max-width:200px;max-height:200px;display:none;position:absolute;z-index:1;top:0;right:80px}
 table.tbDanhMuc .cotAnh:hover .anhDaiDienHover{display:inline-block}
-.cotPhai .head .btThemMoi{display:inline-block;background:url(add.jpg) no-repeat top left;padding-left:25px;padding-bottom:5px;padding-top:5px;color:#0026ff}
+.cotPhai .head .btThemMoi{display:inline-block;background:url(add.jpg) no-repeat top left;padding-left:25px;padding-bottom:5px;padding-top:5px;color:#fff}
 
 /* CSS trang hiển thị màu của sản phẩm*//*
 table.tbMau{width:100%;border-collapse:collapse;border:1px solid #dfdfdf}

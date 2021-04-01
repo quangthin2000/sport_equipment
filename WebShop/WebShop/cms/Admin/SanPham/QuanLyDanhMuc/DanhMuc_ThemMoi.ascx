@@ -1,6 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="DanhMuc_ThemMoi.ascx.cs" Inherits="cms_admin_SanPham_QuanLyDanhMuc_DanhMuc_ThemMoi" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DanhMuc_ThemMoi.ascx.cs" Inherits="WebShop.cms.Admin.SanPham.QuanLyDanhMuc.DanhMuc_ThemMoi" %>
 <div class="head">
-    Thêm mới, chỉnh sửa danh mục
+    Thêm mới danh mục
 </div>
 <div class="FormThemMoi">
     <asp:Literal ID="ltrThongBao" runat="server"></asp:Literal>
@@ -10,9 +10,9 @@
     </div>   
     <div class="thongTin">
         <div class="tenTruong">Tên danh mục</div>
-        <div class="oNhap">            
+        <div class="oNhap">
             <asp:TextBox ID="tbTenDanhMuc" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="tbTenDanhMuc" Display="Dynamic" SetFocusOnError="True" ForeColor="Red" ></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="tbTenDanhMuc" Display="Dynamic" SetFocusOnError="True"></asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="thongTin">
@@ -29,7 +29,7 @@
         <div class="tenTruong">Thứ tự</div>
         <div class="oNhap">
             <asp:TextBox ID="tbThuTu" runat="server"></asp:TextBox>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Thứ tự phải nhập kiểu số" ControlToValidate="tbThuTu" Display="Dynamic" SetFocusOnError="True" ValidationExpression="(\d)*" ForeColor="Red"  ></asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Thứ tự phải nhập kiểu số" ControlToValidate="tbThuTu" Display="Dynamic" SetFocusOnError="True" ValidationExpression="(\d)*" ForeColor="Red"></asp:RegularExpressionValidator>
         </div>
     </div>  
     <div class="thongTin">
@@ -42,5 +42,3 @@
             <asp:Button ID="btThemMoi" runat="server" Text="Thêm mới" CssClass="btThemMoi" OnClick="btThemMoi_Click" />
             <asp:Button ID="btHuy" runat="server" Text="Hủy" CssClass="btHuy" OnClick="btHuy_Click" CausesValidation="false" />
         </div>
-    </div>
-</div>

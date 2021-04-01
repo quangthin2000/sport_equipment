@@ -127,18 +127,23 @@
     <Content Include="cms\Admin\Menu\Menu_ThemMoi.ascx" />
     <Content Include="cms\Admin\SanPham\QuanLyDanhMuc\Ajax\DanhMuc.aspx" />
     <Content Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMuc_HienThi.ascx" />
     <Content Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMuc_ThemMoi.ascx" />
     <Content Include="cms\Admin\SanPham\QuanLyDonHang\Ajax\DonHang.aspx" />
     <Content Include="cms\Admin\SanPham\QuanLyDonHang\DonHangLoadControl.ascx" />
     <Content Include="cms\Admin\SanPham\QuanLyNhomSanPham\Ajax\NhomSanPham.aspx" />
     <Content Include="cms\Admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx" />
-    <Content Include="cms\Admin\SanPham\QuanLySanPham\Ajax\SanPham.aspx" />
     <Content Include="cms\Admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLySanPham\SanPham_HienThi.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLySanPham\SanPham_ThemMoi.ascx" />
+    <Content Include="cms\Admin\SanPham\QuanLySize\SizeLoadControl.ascx" />
     <Content Include="cms\Admin\SanPham\SanPhamLoadControl.ascx" />
     <Content Include="cms\Admin\TaiKhoan\Ajax\TaiKhoan.aspx" />
     <Content Include="cms\Admin\TaiKhoan\TaiKhoanLoadControl.ascx" />
     <Content Include="cms\Admin\TaiKhoan\TaiKhoan_HienThi.ascx" />
     <Content Include="cms\Admin\TaiKhoan\TaiKhoan_ThemMoi.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Images\a.png" />
     <Content Include="Images\blue.png" />
     <Content Include="Images\dau1.png" />
@@ -149,21 +154,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\Database\SQLDatabase.cs" />
-    <Content Include="App_Code\Database\SanPham.cs" />
-    <Content Include="App_Code\Database\ChiTietDonDatHang.cs" />
-    <Content Include="App_Code\Database\ChiTietDonHang.cs" />
-    <Content Include="App_Code\Database\DangKy.cs" />
-    <Content Include="App_Code\Database\DanhMuc.cs" />
-    <Content Include="App_Code\Database\DanhMucTin.cs" />
-    <Content Include="App_Code\Database\DonDatHang.cs" />
-    <Content Include="App_Code\Database\Global.cs" />
-    <Content Include="App_Code\Database\HoaDon.cs" />
-    <Content Include="App_Code\Database\KhachHang.cs" />
-    <Content Include="App_Code\Database\Menu.cs" />
-    <Content Include="App_Code\Database\NhanVien.cs" />
-    <Content Include="App_Code\Database\NhomSanPham.cs" />
-    <Content Include="App_Code\Database\QuyenDangNhap.cs" />
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -171,6 +161,8 @@
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ChiTietDonDatHang.cs" />
+    <Compile Include="ChiTietDonHang.cs" />
     <Compile Include="cms\Admin\AdminLoadControl.ascx.cs">
       <DependentUpon>AdminLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -198,6 +190,10 @@
     </Compile>
     <Compile Include="cms\Admin\SanPham\QuanLyDanhMuc\Ajax\DanhMuc.aspx.cs">
       <DependentUpon>DanhMuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDanhMuc\Ajax\DanhMuc.aspx.designer.cs">
+      <DependentUpon>DanhMuc.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx.cs">
       <DependentUpon>DanhMucLoadControl.ascx</DependentUpon>
@@ -206,9 +202,19 @@
     <Compile Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx.designer.cs">
       <DependentUpon>DanhMucLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMuc_HienThi.ascx.cs">
+      <DependentUpon>DanhMuc_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMuc_HienThi.ascx.designer.cs">
+      <DependentUpon>DanhMuc_HienThi.ascx</DependentUpon>
+    </Compile>
     <Compile Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMuc_ThemMoi.ascx.cs">
       <DependentUpon>DanhMuc_ThemMoi.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLyDanhMuc\DanhMuc_ThemMoi.ascx.designer.cs">
+      <DependentUpon>DanhMuc_ThemMoi.ascx</DependentUpon>
     </Compile>
     <Compile Include="cms\Admin\SanPham\QuanLyDonHang\Ajax\DonHang.aspx.cs">
       <DependentUpon>DonHang.aspx</DependentUpon>
@@ -230,15 +236,33 @@
     <Compile Include="cms\Admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx.designer.cs">
       <DependentUpon>NhomLoadControl.ascx</DependentUpon>
     </Compile>
-    <Compile Include="cms\Admin\SanPham\QuanLySanPham\Ajax\SanPham.aspx.cs">
-      <DependentUpon>SanPham.aspx</DependentUpon>
-    </Compile>
     <Compile Include="cms\Admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx.cs">
       <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="cms\Admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx.designer.cs">
       <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLySanPham\SanPham_HienThi.ascx.cs">
+      <DependentUpon>SanPham_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLySanPham\SanPham_HienThi.ascx.designer.cs">
+      <DependentUpon>SanPham_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLySanPham\SanPham_ThemMoi.ascx.cs">
+      <DependentUpon>SanPham_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLySanPham\SanPham_ThemMoi.ascx.designer.cs">
+      <DependentUpon>SanPham_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLySize\SizeLoadControl.ascx.cs">
+      <DependentUpon>SizeLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Admin\SanPham\QuanLySize\SizeLoadControl.ascx.designer.cs">
+      <DependentUpon>SizeLoadControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="cms\Admin\SanPham\SanPhamLoadControl.ascx.cs">
       <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
@@ -263,7 +287,30 @@
     <Compile Include="cms\Admin\TaiKhoan\TaiKhoan_ThemMoi.ascx.cs">
       <DependentUpon>TaiKhoan_ThemMoi.ascx</DependentUpon>
     </Compile>
+    <Compile Include="DangKy.cs" />
     <Compile Include="DanhMuc.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DonDatHang.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="HoaDon.cs" />
+    <Compile Include="KhachHang.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="NhanVien.cs" />
+    <Compile Include="NhomQuangCao.cs" />
+    <Compile Include="NhomSanPham.cs" />
+    <Compile Include="QuyenDangNhap.cs" />
+    <Compile Include="SanPham.cs" />
+    <Compile Include="Size.cs" />
+    <Compile Include="SQLDatabase.cs" />
     <Compile Include="Website\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -287,7 +334,11 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="cms\Admin\SanPham\QuanLySanPham\Ajax\" />
+    <Folder Include="pic\SanPham\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Index_Homepage.Master" />
     <None Include="Web.Debug.config">

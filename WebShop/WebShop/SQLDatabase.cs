@@ -7,6 +7,9 @@ using System.Data.OleDb;
 
 namespace WebShop
 {
+    /// <summary>
+    /// Class thực hiện các phương thức đơn giản nhất với database 
+    /// </summary>
     public class SQLDatabase
     {
         //lấy chuỗi kết nối
@@ -15,11 +18,11 @@ namespace WebShop
         {
             get
             {
-                if (_connectionString.Equals(""))
-                {
-                    _connectionString = System.Configuration.ConfigurationManager.AppSettings["ConnectionString"];
-                }
-                return _connectionString;
+               if(_connectionString.Equals(""))
+               {
+                   _connectionString = System.Configuration.ConfigurationManager.AppSettings["ConnectionString"];
+               }
+               return _connectionString;
             }
             set
             {
@@ -39,7 +42,7 @@ namespace WebShop
         //thực hiện truy vấn ko cần trả về kết quả (delete,update,inser)
         public static void ExecuteNoneQuery(OleDbCommand cmd)
         {
-            if (cmd.Connection != null)
+            if(cmd.Connection != null)
             {
                 cmd.ExecuteNonQuery();
             }
@@ -58,7 +61,7 @@ namespace WebShop
             {
                 using (DataSet ds = new DataSet())
                 {
-                    using (OleDbDataAdapter da = new OleDbDataAdapter(cmd))
+                    using(OleDbDataAdapter da = new OleDbDataAdapter(cmd))
                     {
                         da.Fill(ds);
                         return ds.Tables[0];
@@ -67,10 +70,10 @@ namespace WebShop
             }
             else
             {
-                using (OleDbConnection conn = GetConnection())
+                using(OleDbConnection conn = GetConnection())
                 {
                     cmd.Connection = conn;
-                    using (DataSet ds = new DataSet())
+                    using(DataSet ds = new DataSet())
                     {
                         using (OleDbDataAdapter da = new OleDbDataAdapter(cmd))
                         {

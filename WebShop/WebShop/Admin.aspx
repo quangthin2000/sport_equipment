@@ -9,6 +9,7 @@
 <head runat="server">
     <title>Trang Quản Trị Website MNST SPORT</title>
     <link href="cms/Admin/css/css_Admin.css" rel="stylesheet" />
+    <script src="cms/Admin/js/jquery-3.1.1.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">

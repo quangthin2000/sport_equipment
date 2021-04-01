@@ -24,6 +24,10 @@ namespace WebShop.cms.Admin.SanPham
                     plSanPhamLoadControl.Controls.Add(LoadControl("QuanLySanPham/SanPhamLoadControl.ascx"));
                     break;
 
+                case "Size":
+                    plSanPhamLoadControl.Controls.Add(LoadControl("QuanLySize/SizeLoadControl.ascx"));
+                    break;
+
                 case "NhomSanPham":
                     plSanPhamLoadControl.Controls.Add(LoadControl("QuanLyNhomSanPham/NhomLoadControl.ascx"));
                     break;

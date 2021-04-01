@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebShop.cms.Admin.SanPham.QuanLySanPham.Ajax
+namespace WebShop.cms.Admin.SanPham.QuanLySanPham
 {
-    public partial class SanPham : System.Web.UI.Page
+    public partial class SanPham_ThemMoi : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

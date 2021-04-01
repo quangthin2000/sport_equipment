@@ -1,1 +1,2 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DanhMuc.aspx.cs" Inherits="cms_admin_SanPham_QuanLyDanhMuc_Ajax_DanhMuc" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DanhMuc.aspx.cs" Inherits="WebShop.cms.Admin.SanPham.QuanLyDanhMuc.Ajax.DanhMuc" %>
+
