@@ -1,2 +1,2 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TaiKhoan.aspx.cs" Inherits="cms_admin_TaiKhoan_Ajax_TaiKhoan" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TaiKhoan.aspx.cs" Inherits="WebShop.cms.Admin.TaiKhoan.Ajax.TaiKhoan" %>
 

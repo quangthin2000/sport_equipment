@@ -17,6 +17,7 @@ namespace WebShop.cms.Admin.SanPham.QuanLySanPham
             switch (thaotac)
             {
                 case "ThemMoi":
+                case "ChinhSua":
                     plLoadControl.Controls.Add(LoadControl("SanPham_ThemMoi.ascx"));
                     break;
 

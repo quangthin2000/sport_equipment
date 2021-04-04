@@ -285,3 +285,12 @@ D:\Code\Github\sport_equipment\WebShop\WebShop\obj\Debug\WebShop.csproj.CopyComp
 D:\Code\Github\sport_equipment\WebShop\WebShop\obj\Debug\WebShop.dll
 D:\Code\Github\sport_equipment\WebShop\WebShop\obj\Debug\WebShop.pdb
 >>>>>>> a05ec1117d1192c0f5c9fa21bbd9dc46a7b451f1
+D:\ANSON\html\TMDT\sport_equipment\WebShop\WebShop\bin\CKEditor.NET.dll
+D:\ANSON\html\TMDT\sport_equipment\WebShop\WebShop\bin\CKFinder.dll
+D:\ANSON\html\TMDT\sport_equipment\WebShop\WebShop\bin\CKFinder_FileEditor.dll
+D:\ANSON\html\TMDT\sport_equipment\WebShop\WebShop\bin\CKFinder_ImageResize.dll
+D:\ANSON\html\TMDT\sport_equipment\WebShop\WebShop\bin\CKFinder_Watermark.dll
+D:\ANSON\html\TMDT\sport_equipment\WebShop\WebShop\bin\WebApplication2.dll
+D:\ANSON\html\TMDT\sport_equipment\WebShop\WebShop\bin\CKFinder_FileEditor.pdb
+D:\ANSON\html\TMDT\sport_equipment\WebShop\WebShop\bin\CKFinder_ImageResize.pdb
+D:\ANSON\html\TMDT\sport_equipment\WebShop\WebShop\bin\CKFinder_Watermark.pdb

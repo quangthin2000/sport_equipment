@@ -1,142 +1,144 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
-using System.Data.OleDb;
 
-public partial class cms_admin_TaiKhoan_TaiKhoan_ThemMoi : System.Web.UI.UserControl
+namespace WebShop.cms.Admin.TaiKhoan
 {
-    private string thaotac = "";
-    private string id = "";//lấy id của danh mục cần chỉnh sửa
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class TaiKhoan_ThemMoi : System.Web.UI.UserControl
     {
-        if (Request.QueryString["thaotac"] != null)
-            thaotac = Request.QueryString["thaotac"];
-        if (Request.QueryString["id"] != null)
-            id = Request.QueryString["id"];
-        if (!IsPostBack)
+        private string thaotac = "";
+        private string id = "";//lấy id của danh mục cần chỉnh sửa
+        protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["thaotac"] != null)
+                thaotac = Request.QueryString["thaotac"];
+            if (Request.QueryString["id"] != null)
+                id = Request.QueryString["id"];
+            if (!IsPostBack)
+            {
 
-            LayQuyenDangNhap();
+                LayQuyenDangNhap();
 
-            HienThiThongTin(id);
+                HienThiThongTin(id);
+            }
+
         }
 
-    }
-
-    private void HienThiThongTin(string id)
-    {
-        if (thaotac == "ChinhSua")
+        private void HienThiThongTin(string id)
         {
-            btThemMoi.Text = "Chỉnh Sửa";
-            cbThemNhieuDanhMuc.Visible = false;
-            tbTenDangNhap.Enabled = false;
+            if (thaotac == "ChinhSua")
+            {
+                btThemMoi.Text = "Chỉnh Sửa";
+                cbThemNhieuDanhMuc.Visible = false;
+                tbTenDangNhap.Enabled = false;
 
+                DataTable dt = new DataTable();
+                dt = WebShop.DangKy.Thongtin_DangKy_by_id(id);
+                if (dt.Rows.Count > 0)
+                {
+                    ddlQuyenDangNhap.SelectedValue = dt.Rows[0]["MaQuyen"].ToString();
+                    tbTenDangNhap.Text = dt.Rows[0]["TenDangNhap"].ToString();
+                    tbEmail.Text = dt.Rows[0]["EmailDK"].ToString();
+                    tbDiaChi.Text = dt.Rows[0]["DiaChiDK"].ToString();
+                    tbHoTen.Text = dt.Rows[0]["TenDayDu"].ToString();
+                    tbNgaySinh.Text = dt.Rows[0]["NgaySinh"].ToString();
+                    ddlGioiTinh.SelectedValue = dt.Rows[0]["GioiTinhDK"].ToString();
+
+                    //lưu lại mật khẩu cũ vào trường ẩn để lấy lại khi ko cập nhật mật khẩu mới
+                    hdMatKhauCu.Value = dt.Rows[0]["MatKhau"].ToString();
+                    // bỏ yêu cầu bắt buộc nhập mật khẩu khi cập nhật
+                    RequiredFieldValidator2.Visible = false;
+                }
+            }
+
+            else
+            {
+                btThemMoi.Text = "Thêm Mới";
+                cbThemNhieuDanhMuc.Visible = true;
+            }
+
+        }
+        private void LayQuyenDangNhap()
+        {
             DataTable dt = new DataTable();
-            dt = emdepvn.DangKy.Thongtin_DangKy_by_id(id);
-            if (dt.Rows.Count > 0)
+            dt = WebShop.QuyenDangNhap.Thongtin_Quyendangnhap();
+            ddlQuyenDangNhap.Items.Clear();
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
-                ddlQuyenDangNhap.SelectedValue = dt.Rows[0]["MaQuyen"].ToString();
-                tbTenDangNhap.Text = dt.Rows[0]["TenDangNhap"].ToString();
-                tbEmail.Text = dt.Rows[0]["EmailDK"].ToString(); 
-                tbDiaChi.Text = dt.Rows[0]["DiaChiDK"].ToString(); 
-                tbHoTen.Text = dt.Rows[0]["TenDayDu"].ToString();
-                tbNgaySinh.Text = dt.Rows[0]["NgaySinh"].ToString();
-                ddlGioiTinh.SelectedValue = dt.Rows[0]["GioiTinhDK"].ToString();
+                ddlQuyenDangNhap.Items.Add(new ListItem(dt.Rows[i]["TenQuyen"].ToString(), dt.Rows[i]["MaQuyen"].ToString()));
 
-                //lưu lại mật khẩu cũ vào trường ẩn để lấy lại khi ko cập nhật mật khẩu mới
-                hdMatKhauCu.Value = dt.Rows[0]["MatKhau"].ToString();
-                // bỏ yêu cầu bắt buộc nhập mật khẩu khi cập nhật
-                RequiredFieldValidator2.Visible = false;
             }
         }
-
-        else
+        protected void btThemMoi_Click(object sender, EventArgs e)
         {
-            btThemMoi.Text = "Thêm Mới";
-            cbThemNhieuDanhMuc.Visible = true;
-        }
-
-    }
-    private void LayQuyenDangNhap()
-    {
-        DataTable dt = new DataTable();
-        dt = emdepvn.QuyenDangNhap.Thongtin_Quyendangnhap();
-        ddlQuyenDangNhap.Items.Clear();
-        for (int i = 0; i < dt.Rows.Count; i++)
-        {
-            ddlQuyenDangNhap.Items.Add(new ListItem(dt.Rows[i]["TenQuyen"].ToString(), dt.Rows[i]["MaQuyen"].ToString()));
-            
-        }
-    }
-    protected void btThemMoi_Click(object sender, EventArgs e)
-    {
-        if (thaotac == "ThemMoi")
-        {
-            #region code nút thêm mới
-
-            //Mã hóa mật khẩu trước khi thêm vào database
-            string matKhau = "";
-            if(matKhau != null)
-              matKhau = emdepvn.MaHoa.MaHoaMD5(tbMatKhau.Text);
-            else
-                matKhau = emdepvn.MaHoa.MaHoaMD5(hdMatKhauCu.Value);//TRƯỜNG hợp ko nhập mật khẩu thì lấy lại mật khẩu cũ
-
-            emdepvn.DangKy.Dangky_Inser(
-                tbTenDangNhap.Text, matKhau, tbEmail.Text, 
-                tbDiaChi.Text, tbHoTen.Text, "", tbNgaySinh.Text , 
-                ddlGioiTinh.SelectedValue, ddlQuyenDangNhap.SelectedValue, "");
-            ltrThongBao.Text = "<div class='thongBaoTaoThanhCong' style='color:#ff006e;font-size:16px;padding-bottom:20px;text-align:center;font-weight:bold'>Đã tạo tài khoản: " + tbTenDangNhap.Text + "</div>";
-
-            if (cbThemNhieuDanhMuc.Checked)
+            if (thaotac == "ThemMoi")
             {
-                //viết code xử lý xóa mục đã nhập để người dùng nhập danh mục tiếp theo
-                ResetControl();
+                #region code nút thêm mới
+
+                //Mã hóa mật khẩu trước khi thêm vào database
+                string matKhau = "";
+                if (matKhau != null)
+                    matKhau = WebShop.MaHoa.MaHoaMD5(tbMatKhau.Text);
+                else
+                    matKhau = WebShop.MaHoa.MaHoaMD5(hdMatKhauCu.Value);//TRƯỜNG hợp ko nhập mật khẩu thì lấy lại mật khẩu cũ
+
+                WebShop.DangKy.Dangky_Inser(
+                    tbTenDangNhap.Text, matKhau, tbEmail.Text,
+                    tbDiaChi.Text, tbHoTen.Text, "", tbNgaySinh.Text,
+                    ddlGioiTinh.SelectedValue, ddlQuyenDangNhap.SelectedValue, "");
+                ltrThongBao.Text = "<div class='thongBaoTaoThanhCong' style='color:#1D3C5A;font-size:16px;padding-bottom:20px;text-align:center;font-weight:bold'>Đã tạo tài khoản: " + tbTenDangNhap.Text + "</div>";
+
+                if (cbThemNhieuDanhMuc.Checked)
+                {
+                    //viết code xử lý xóa mục đã nhập để người dùng nhập danh mục tiếp theo
+                    ResetControl();
+                }
+
+                else
+                {
+                    //đẩy trang về trang danh sách các damnh mục đã tạo
+
+                    Response.Redirect("Admin.aspx?modul=TaiKhoan&modulphu=DanhSachTaiKhoan");
+                }
+                #endregion
             }
-
             else
             {
+                #region code nút chỉnh sửa
+
+                //Mã hóa mật khẩu trước khi thêm vào database
+                string matKhau = WebShop.MaHoa.MaHoaMD5(tbMatKhau.Text);
+
+                WebShop.DangKy.Dangky_Update(
+                    id, matKhau, tbEmail.Text,
+                    tbDiaChi.Text, tbHoTen.Text, "", tbNgaySinh.Text,
+                    ddlGioiTinh.SelectedValue, ddlQuyenDangNhap.SelectedValue);
+
                 //đẩy trang về trang danh sách các damnh mục đã tạo
-
                 Response.Redirect("Admin.aspx?modul=TaiKhoan&modulphu=DanhSachTaiKhoan");
+
+                #endregion
             }
-            #endregion
         }
-        else
+
+        private void ResetControl()
         {
-            #region code nút chỉnh sửa
+            tbTenDangNhap.Text = "";
+            tbMatKhau.Text = "";
+            tbEmail.Text = "";
+            tbDiaChi.Text = "";
+            tbHoTen.Text = "";
+            tbNgaySinh.Text = "";
 
-            //Mã hóa mật khẩu trước khi thêm vào database
-            string matKhau = emdepvn.MaHoa.MaHoaMD5(tbMatKhau.Text);
 
-            emdepvn.DangKy.Dangky_Update(
-                id, matKhau, tbEmail.Text,
-                tbDiaChi.Text, tbHoTen.Text, "", tbNgaySinh.Text,
-                ddlGioiTinh.SelectedValue, ddlQuyenDangNhap.SelectedValue);
-
-            //đẩy trang về trang danh sách các damnh mục đã tạo
-            Response.Redirect("Admin.aspx?modul=TaiKhoan&modulphu=DanhSachTaiKhoan");
-
-            #endregion
+        }
+        protected void btHuy_Click(object sender, EventArgs e)
+        {
+            ResetControl();
         }
     }
-
-    private void ResetControl()
-    {
-        tbTenDangNhap.Text = "";
-        tbMatKhau.Text = "";
-        tbEmail.Text = "";
-        tbDiaChi.Text="";
-        tbHoTen.Text="";
-        tbNgaySinh.Text = "";
-
-
-    }
-    protected void btHuy_Click(object sender, EventArgs e)
-    {
-        ResetControl();
-    }
-}*/
+}

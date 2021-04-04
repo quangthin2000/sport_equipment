@@ -10,7 +10,6 @@
             <li><a class="<%=DanhDau("SanPham","DanhSachSanPham","") %>" href="Admin.aspx?modul=SanPham&modulphu=DanhSachSanPham">Danh sách sản phẩm</a></li>
             <li><a class="<%=DanhDau("SanPham","Size","") %>" href="Admin.aspx?modul=SanPham&modulphu=Size">Size sản phẩm</a></li>
             <li><a class="<%=DanhDau("SanPham","NhomSanPham","") %>" href="Admin.aspx?modul=SanPham&modulphu=NhomSanPham">Nhóm Sản Phẩm</a></li>
-            <li><a class="<%=DanhDau("SanPham","DonHang","") %>" href="Admin.aspx?modul=SanPham&modulphu=DonHang">Đơn hàng</a></li>
         </ul>
         <div class="head">
             Thêm mới

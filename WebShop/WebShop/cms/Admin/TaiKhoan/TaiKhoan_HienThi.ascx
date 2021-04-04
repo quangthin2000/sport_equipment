@@ -1,6 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="TaiKhoan_HienThi.ascx.cs" Inherits="cms_admin_TaiKhoan_TaiKhoan_HienThi" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TaiKhoan_HienThi.ascx.cs" Inherits="WebShop.cms.Admin.TaiKhoan.TaiKhoan_HienThi" %>
 <div class="head">
-    Danh sách tài khoản đã tạo 
+    Danh sách tài khoản đã tạo
     <div class="fr ter"><a class="btThemMoi" href="/Admin.aspx?modul=TaiKhoan&modulphu=DanhSachTaiKhoan&thaotac=ThemMoi">Thêm tài khoản mới</a></div>
     <div class="cb"></div>
 </div>
@@ -16,7 +16,7 @@
            <th class="cotCongCu">Công cụ</th>
        </tr>
        <asp:Literal ID="ltrTaiKhoan" runat="server"></asp:Literal>
-   </table>
+    </table>
 </div>
 <script type="text/javascript">
     function XoaTaiKhoan(TenDangNhap) {

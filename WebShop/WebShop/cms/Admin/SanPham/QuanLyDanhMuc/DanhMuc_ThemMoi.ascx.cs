@@ -97,7 +97,7 @@ namespace WebShop.cms.Admin.SanPham.QuanLyDanhMuc
 
 
                 WebShop.DanhMuc.Danhmuc_Inser(tbTenDanhMuc.Text, flAnhDaiDien.FileName, tbThuTu.Text, ddlDanhMucCha.SelectedValue, "");
-                ltrThongBao.Text = "<div class='thongBaoTaoThanhCong' style='color:#ff006e;font-size:16px;padding-bottom:20px;text-align:center;font-weight:bold'>Đã tạo danh mục: " + tbTenDanhMuc.Text + "</div>";
+                ltrThongBao.Text = "<div class='thongBaoTaoThanhCong' style='color:#1D3C5A;font-size:16px;padding-bottom:20px;text-align:center;font-weight:bold'>Đã tạo danh mục: " + tbTenDanhMuc.Text + "</div>";
 
                 if (cbThemNhieuDanhMuc.Checked)
                 {

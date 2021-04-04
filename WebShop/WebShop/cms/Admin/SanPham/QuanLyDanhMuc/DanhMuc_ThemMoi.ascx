@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DanhMuc_ThemMoi.ascx.cs" Inherits="WebShop.cms.Admin.SanPham.QuanLyDanhMuc.DanhMuc_ThemMoi" %>
 <div class="head">
-    Thêm mới danh mục
+    Thêm mới, chỉnh sửa danh sách danh mục
 </div>
 <div class="FormThemMoi">
     <asp:Literal ID="ltrThongBao" runat="server"></asp:Literal>
@@ -42,3 +42,5 @@
             <asp:Button ID="btThemMoi" runat="server" Text="Thêm mới" CssClass="btThemMoi" OnClick="btThemMoi_Click" />
             <asp:Button ID="btHuy" runat="server" Text="Hủy" CssClass="btHuy" OnClick="btHuy_Click" CausesValidation="false" />
         </div>
+    </div>
+    </div>

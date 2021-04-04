@@ -1,26 +1,28 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 
-public partial class cms_admin_TaiKhoan_TaiKhoan_HienThi : System.Web.UI.UserControl
+namespace WebShop.cms.Admin.TaiKhoan
 {
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class TaiKhoan_HienThi : System.Web.UI.UserControl
     {
-        if (!IsPostBack)
-            LayTaiKhoan();
-    }
-
-    private void LayTaiKhoan()
-    {
-        DataTable dt = new DataTable();
-        dt = emdepvn.DangKy.Thongtin_Dangky();
-        for (int i = 0; i < dt.Rows.Count; i++)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            ltrTaiKhoan.Text += @"
+            if (!IsPostBack)
+                LayTaiKhoan();
+        }
+
+        private void LayTaiKhoan()
+        {
+            DataTable dt = new DataTable();
+            dt = WebShop.DangKy.Thongtin_Dangky();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                ltrTaiKhoan.Text += @"
        <tr id='maDong_" + dt.Rows[i]["TenDangNhap"] + @"'>
            <td class='cotTenDK'>" + dt.Rows[i]["TenDangNhap"] + @"</td>
            <td class='cotEmail'>" + dt.Rows[i]["EmailDK"] + @"</td>
@@ -34,7 +36,8 @@ public partial class cms_admin_TaiKhoan_TaiKhoan_HienThi : System.Web.UI.UserCon
            </td>
        </tr>
 ";
-        }
+            }
 
+        }
     }
-}*/
+}
