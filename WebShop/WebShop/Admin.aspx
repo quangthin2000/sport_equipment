@@ -21,7 +21,7 @@
                         <a href="/Admin.aspx"><img src="cms/Admin/css/Picture3.png" /></a>
                     </div>
                     <div class="accountMenu">
-                        Xin Chào: Admin
+                        Xin Chào: <asp:Literal ID="ltrTenDangNhap" runat="server"></asp:Literal> | <asp:LinkButton ID="lbtDangXuat" runat="server" OnClick="lbtDangXuat_Click">Đăng xuất</asp:LinkButton>
                     </div>
                 </div>
             </div>
@@ -29,11 +29,11 @@
             <!--menu chinh-->
             <div class="MenuChinh">
                 <ul>
-                    <li><a href="/Admin.aspx" title="Trang Chủ">Trang Chủ</a></li>
-                    <li><a href="/Admin.aspx?modul=SanPham" title="Sản Phẩm">Sản Phẩm</a></li>
-                    <li><a href="/Admin.aspx?modul=KhachHang" title="Khách Hàng">Khách Hàng</a></li>
-                    <li><a href="/Admin.aspx?modul=TaiKhoan" title="Tài Khoản">Tài Khoản</a></li>
-                    <li><a href="/Admin.aspx?modul=Menu" title="Menu">Menu</a></li>
+                        <li><a class="<%=DanhDau("SanPham") %>" href="Admin.aspx?modul=SanPham">Sản phẩm</a></li>
+                        <li><a class="<%=DanhDau("KhachHang") %>" href="Admin.aspx?modul=KhachHang">Khách Hàng</a></li>
+                        <li><a class="<%=DanhDau("TaiKhoan") %>" href="Admin.aspx?modul=TaiKhoan">Tài khoản</a></li>
+                        <li><a class="<%=DanhDau("QuangCao") %>" href="Admin.aspx?modul=QuangCao">Quảng cáo</a></li> 
+                        <li><a class="<%=DanhDau("Menu") %>" href="Admin.aspx?modul=Menu">Menu</a></li>
                 </ul>
             </div>
 

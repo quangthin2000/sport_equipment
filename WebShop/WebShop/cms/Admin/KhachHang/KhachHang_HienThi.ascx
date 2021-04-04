@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="KhachHang_HienThi.ascx.cs" Inherits="cms_admin_KhachHang_KhachHang_HienThi" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="KhachHang_HienThi.ascx.cs" Inherits="WebShop.cms.Admin.KhachHang.KhachHang_HienThi" %>
 <div class="head">
     Danh sách khách hàng 
     <div class="cb"></div>
@@ -13,7 +13,7 @@
            <th class="cotEmail">Email</th>
        </tr>
        <asp:Literal ID="ltrKhachHang" runat="server"></asp:Literal>
-   </table>
+    </table>
 </div>
 
 <%--<script type="text/javascript">

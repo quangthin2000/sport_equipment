@@ -12,7 +12,7 @@ public partial class cms_admin_SanPham_QuanLySize_Ajax_Size : System.Web.UI.Page
     {
         //Code kiểm tra đăng nhập tại đây sau đó mới thực hiện các thao tác dưới
         //Kiểm tra nếu đã đăng nhập thì mới cho vào trang này
-        /*if (Session["DangNhap"] != null && Session["DangNhap"].ToString() == "1")
+        if (Session["DangNhap"] != null && Session["DangNhap"].ToString() == "1")
         {
             //Đã đăng nhập
         }
@@ -20,7 +20,7 @@ public partial class cms_admin_SanPham_QuanLySize_Ajax_Size : System.Web.UI.Page
         {
             //Nếu chưa đăng nhập --> return để dừng không cho thực hiện các câu lệnh bên dưới
             return;
-        }*/
+        }
         if (Request.Params["ThaoTac"] != null)
         {
             thaotac = Request.Params["ThaoTac"];

@@ -56,7 +56,7 @@
             <asp:DropDownList ID="ddlSize" runat="server"></asp:DropDownList></div>
     </div>
     <div class="thongTin">
-        <div class="tenTruong">Chọn chất liệu</div>
+        <div class="tenTruong">Chọn nhóm sản phẩm</div>
         <div class="oNhap">
             <asp:DropDownList ID="ddlNhom" runat="server"></asp:DropDownList></div>
     </div>

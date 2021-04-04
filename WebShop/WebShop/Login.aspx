@@ -1,15 +1,15 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebShop.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebShop.Login1" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Trang đăng nhập vào khu vực quản trị website</title>
-    <link href="cms/admin/css/css_DangNhap.css" rel="stylesheet" />
+    <link href="cms/Admin/css/css_DangNhap.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="FormDangNhap">
+        <div class="FormDangNhap">
         <div class="head">Đăng nhập hệ thống</div>
         <div class="controls">
             <div class="row">
@@ -18,27 +18,27 @@
                     <asp:TextBox ID="tbTenDangNhap" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" SetFocusOnError="True" Display="Dynamic" 
                         ControlToValidate="tbTenDangNhap" ForeColor="Red"></asp:RequiredFieldValidator>
-                  </div>
+                </div>            
             </div>
             <div class="row">
                 <div class="left">Mật khẩu</div>
                 <div class="right">
-                    <asp:TextBox ID="tbMatKhau" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbMatKhau" runat="server" TextMode="Password"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" SetFocusOnError="True" Display="Dynamic" 
                     ControlToValidate="tbMatKhau" ForeColor="Red"></asp:RequiredFieldValidator>
-                </div>
+                </div>            
             </div>
             <div class="row">
                 <div class="left">&nbsp;</div>
                 <div class="right">
-<%--                    <asp:LinkButton ID="lbtDangNhap" runat="server" CssClass="btDangNhap" OnClick="lbtDangNhap_Click">LinkButton</asp:LinkButton>--%>
+                    <asp:LinkButton ID="lbtDangNhap" runat="server" CssClass="btDangNhap" OnClick="lbtDangNhap_Click">Đăng nhập</asp:LinkButton>
                 </div>            
             </div>
             <div>
                 <asp:Literal ID="ltrThongBao" runat="server"></asp:Literal>
             </div>
+            </div>
         </div>
-    </div>
-    </form>
+     </form>
 </body>
 </html>

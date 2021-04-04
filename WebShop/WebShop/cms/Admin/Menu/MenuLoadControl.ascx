@@ -1,5 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="MenuLoadControl.ascx.cs" Inherits="cms_admin_Menu_MenuLoadControl" %>
-
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MenuLoadControl.ascx.cs" Inherits="WebShop.cms.Admin.Menu.MenuLoadControl" %>
 <div class="container">
     <div style="clear:both;height:20px"></div>
     <div class="cotTrai">

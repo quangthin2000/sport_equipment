@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="KhachHangLoadControl.ascx.cs" Inherits="cms_admin_KhachHang_KhachHangLoadControl" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="KhachHangLoadControl.ascx.cs" Inherits="WebShop.cms.Admin.KhachHang.KhachHangLoadControl" %>
 <div class="container">
     <div style="clear:both;height:20px"></div>
     <div class="cotTrai">

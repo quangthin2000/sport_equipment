@@ -32,6 +32,10 @@ namespace WebShop.cms.Admin
                     plAdminLoadControl.Controls.Add(LoadControl("Menu/MenuLoadControl.ascx"));
                     break;
 
+                case "QuangCao":
+                    plAdminLoadControl.Controls.Add(LoadControl("QuangCao/QuangCaoLoadControl.ascx"));
+                    break;
+
                 default:
                     plAdminLoadControl.Controls.Add(LoadControl("SanPham/SanPhamLoadControl.ascx"));
                     break;

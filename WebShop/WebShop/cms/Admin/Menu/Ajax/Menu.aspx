@@ -1,2 +1,1 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Menu.aspx.cs" Inherits="cms_admin_Menu_Ajax_Menu" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="WebShop.cms.Admin.Menu.Ajax.Menu" %>

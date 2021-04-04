@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Menu_HienThi.ascx.cs" Inherits="cms_admin_Menu_Menu_HienThi" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Menu_HienThi.ascx.cs" Inherits="WebShop.cms.Admin.Menu.Menu_HienThi" %>
 <div class="head">
     Các Menu đã tạo. 
     <div class="fr ter"><a class="btThemMoi" href="/Admin.aspx?modul=Menu&modulphu=DanhSachMenu&thaotac=ThemMoi">Thêm mới danh mục</a></div>
@@ -13,7 +13,7 @@
            <th class="cotCongCu">Công cụ</th>
        </tr>
        <asp:Literal ID="ltrMenu" runat="server"></asp:Literal>
-   </table>
+    </table>
 </div>
 
 <script type="text/javascript">

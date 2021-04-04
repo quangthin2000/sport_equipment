@@ -10,7 +10,7 @@
 namespace WebShop {
     
     
-    public partial class Login {
+    public partial class Login1 {
         
         /// <summary>
         /// form1 control.
@@ -56,6 +56,15 @@ namespace WebShop {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        
+        /// <summary>
+        /// lbtDangNhap control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtDangNhap;
         
         /// <summary>
         /// ltrThongBao control.

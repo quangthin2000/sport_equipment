@@ -1,26 +1,28 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 
-public partial class cms_admin_KhachHang_KhachHang_HienThi : System.Web.UI.UserControl
+namespace WebShop.cms.Admin.KhachHang
 {
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class KhachHang_HienThi : System.Web.UI.UserControl
     {
-        if (!IsPostBack)
-            LayKhachHang();
-    }
-
-    private void LayKhachHang()
-    {
-        DataTable dt = new DataTable();
-        dt = emdepvn.KhachHang.Thongtin_Khachhang();
-        for (int i = 0; i < dt.Rows.Count; i++)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            ltrKhachHang.Text += @"
+            if (!IsPostBack)
+                LayKhachHang();
+        }
+
+        private void LayKhachHang()
+        {
+            DataTable dt = new DataTable();
+            dt = WebShop.KhachHang.Thongtin_Khachhang();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                ltrKhachHang.Text += @"
 <tr id='maDong_" + dt.Rows[i]["MaKH"] + @"'>
            <td class='cotMa'>" + dt.Rows[i]["MaKH"] + @"</td>
            <td class='cotTen'>" + dt.Rows[i]["TenKH"] + @"</td>
@@ -29,7 +31,8 @@ public partial class cms_admin_KhachHang_KhachHang_HienThi : System.Web.UI.UserC
            <td class='cotEmail'>" + dt.Rows[i]["EmailKH"] + @"</td>
 </tr>
 ";
-        }
+            }
 
+        }
     }
-}*/
+}
