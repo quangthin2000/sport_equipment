@@ -990,8 +990,15 @@
     <Content Include="cms\Admin\TaiKhoan\TaiKhoan_ThemMoi.ascx" />
     <Content Include="cms\display\DisplayLoadControl.ascx" />
     <Content Include="cms\display\GioiThieu\GioiThieuLoadControl.ascx" />
+    <Content Include="cms\display\SanPham\Ajax\XuLyGioHang.aspx" />
+    <Content Include="cms\display\SanPham\ChiTietSanPham.ascx" />
+    <Content Include="cms\display\SanPham\DanhSachCacSanPham.ascx" />
+    <Content Include="cms\display\SanPham\GioHang.ascx" />
     <Content Include="cms\display\SanPham\SanPhamLoadControl.ascx" />
-    <Content Include="cms\display\ThanhToan\ThanhToanLoadControl.ascx" />
+    <Content Include="cms\display\SanPham\TimKiem.ascx" />
+    <Content Include="cms\display\SanPham\TrangChuModulSanPham.ascx" />
+    <Content Include="cms\display\ThanhVien\DangKy.ascx" />
+    <Content Include="cms\display\ThanhVien\DangNhap.ascx" />
     <Content Include="cms\display\ThanhVien\ThanhVienLoadControl.ascx" />
     <Content Include="cms\display\TrangChu\TrangChuLoadControl.ascx" />
     <Content Include="css\chi-tiet-san-pham.css" />
@@ -1080,6 +1087,8 @@
     <Content Include="js\index.js" />
     <Content Include="js\jquery-1.8.3.min.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Onepay\vpc_dr.aspx" />
+    <Content Include="Onepay\vpc_dr_quocte.aspx" />
     <Content Include="pic\anhsp\cart.png" />
     <Content Include="pic\anhsp\check.png" />
     <Content Include="pic\dangnhap\2.png" />
@@ -1389,9 +1398,6 @@
       <DependentUpon>DisplayLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cms\display\DisplayLoadControl.ascx.designer.cs">
-      <DependentUpon>DisplayLoadControl.ascx</DependentUpon>
-    </Compile>
     <Compile Include="cms\display\GioiThieu\GioiThieuLoadControl.ascx.cs">
       <DependentUpon>GioiThieuLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1399,42 +1405,55 @@
     <Compile Include="cms\display\GioiThieu\GioiThieuLoadControl.ascx.designer.cs">
       <DependentUpon>GioiThieuLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\display\SanPham\Ajax\XuLyGioHang.aspx.cs">
+      <DependentUpon>XuLyGioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\ChiTietSanPham.ascx.cs">
+      <DependentUpon>ChiTietSanPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\DanhSachCacSanPham.ascx.cs">
+      <DependentUpon>DanhSachCacSanPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\GioHang.ascx.cs">
+      <DependentUpon>GioHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="cms\display\SanPham\SanPhamLoadControl.ascx.cs">
       <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cms\display\SanPham\SanPhamLoadControl.ascx.designer.cs">
-      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="cms\display\ThanhToan\ThanhToanLoadControl.ascx.cs">
-      <DependentUpon>ThanhToanLoadControl.ascx</DependentUpon>
+    <Compile Include="cms\display\SanPham\TimKiem.ascx.cs">
+      <DependentUpon>TimKiem.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cms\display\ThanhToan\ThanhToanLoadControl.ascx.designer.cs">
-      <DependentUpon>ThanhToanLoadControl.ascx</DependentUpon>
+    <Compile Include="cms\display\SanPham\TrangChuModulSanPham.ascx.cs">
+      <DependentUpon>TrangChuModulSanPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\DangKy.ascx.cs">
+      <DependentUpon>DangKy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\DangNhap.ascx.cs">
+      <DependentUpon>DangNhap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="cms\display\ThanhVien\ThanhVienLoadControl.ascx.cs">
       <DependentUpon>ThanhVienLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cms\display\ThanhVien\ThanhVienLoadControl.ascx.designer.cs">
-      <DependentUpon>ThanhVienLoadControl.ascx</DependentUpon>
-    </Compile>
     <Compile Include="cms\display\TrangChu\TrangChuLoadControl.ascx.cs">
       <DependentUpon>TrangChuLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="cms\display\TrangChu\TrangChuLoadControl.ascx.designer.cs">
-      <DependentUpon>TrangChuLoadControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="DangKy.cs" />
     <Compile Include="DanhMuc.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="DonDatHang.cs" />
     <Compile Include="EmailExtension.cs" />
@@ -1456,6 +1475,16 @@
     <Compile Include="NhanVien.cs" />
     <Compile Include="NhomQuangCao.cs" />
     <Compile Include="NhomSanPham.cs" />
+    <Compile Include="OnepayCode.cs" />
+    <Compile Include="OnepayQuocTeCode.cs" />
+    <Compile Include="Onepay\vpc_dr.aspx.cs">
+      <DependentUpon>vpc_dr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Onepay\vpc_dr_quocte.aspx.cs">
+      <DependentUpon>vpc_dr_quocte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="QuangCao.cs" />
     <Compile Include="QuyenDangNhap.cs" />
     <Compile Include="SanPham.cs" />
