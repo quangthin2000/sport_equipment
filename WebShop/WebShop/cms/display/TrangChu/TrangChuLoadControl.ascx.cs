@@ -8,7 +8,7 @@ public partial class cms_display_TrangChu_TrangChuLoadControl : System.Web.UI.Us
     {
         if (!IsPostBack)
         {
-            ltrSlide.Text = LaySlide();
+            //ltrSlide.Text = LaySlide();
 
             ltrNhomSanPham.Text = LayNhomSanPham();
         }
@@ -69,44 +69,44 @@ public partial class cms_display_TrangChu_TrangChuLoadControl : System.Web.UI.Us
     #endregion
 
     #region Lấy logo
-    private string LaySlide()
-    {
-        string s = "";
+//    private string LaySlide()
+//    {
+//        string s = "";
 
-        //Code lấy ra vị trí quảng nhóm cáo
-        DataTable dt = new DataTable();
-        dt = WebShop.NhomQuangCao.Thongtin_Nhomquangcao_by_vitriqc("slide");
+//        //Code lấy ra vị trí quảng nhóm cáo
+//        DataTable dt = new DataTable();
+//        dt = WebShop.NhomQuangCao.Thongtin_Nhomquangcao_by_vitriqc("slide");
 
-        //Nếu tồn tại vị trí nhóm quảng cáo --> tìm quảng cáo trong nhóm đó
-        if (dt.Rows.Count > 0)
-        {
-            //Gọi tới phương thức lấy ảnh quảng cáo theo id nhóm quảng cáo
-            s = LayAnhSlide(dt.Rows[0]["NhomQuangCaoID"].ToString());
-        }
+//        //Nếu tồn tại vị trí nhóm quảng cáo --> tìm quảng cáo trong nhóm đó
+//        if (dt.Rows.Count > 0)
+//        {
+//            //Gọi tới phương thức lấy ảnh quảng cáo theo id nhóm quảng cáo
+//            s = LayAnhSlide(dt.Rows[0]["NhomQuangCaoID"].ToString());
+//        }
 
-        return s;
-    }
+//        return s;
+//    }
 
-    private string LayAnhSlide(string nhomQuangCaoID)
-    {
-        string s = "";
+//    private string LayAnhSlide(string nhomQuangCaoID)
+//    {
+//        string s = "";
 
-        DataTable dt = new DataTable();
-        dt = WebShop.QuangCao.Thongtin_Quangcao_by_nhomquangcaoid(nhomQuangCaoID);
-        if (dt.Rows.Count > 0)
-        {
+//        DataTable dt = new DataTable();
+//        dt = WebShop.QuangCao.Thongtin_Quangcao_by_nhomquangcaoid(nhomQuangCaoID);
+//        if (dt.Rows.Count > 0)
+//        {
 
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                s += @"
-<div data-p='225.00' style='display: none;'>                      
-    <img data-u='image' src='/pic/quangcao/" + dt.Rows[i]["AnhQC"] + @"' alt='" + dt.Rows[i]["TenQC"] + @"' />
-</div>";
-            }
+//            for (int i = 0; i < dt.Rows.Count; i++)
+//            {
+//                s += @"
+//<div data-p='225.00' style='display: none;'>                      
+//    <img data-u='image' src='/pic/quangcao/" + dt.Rows[i]["AnhQC"] + @"' alt='" + dt.Rows[i]["TenQC"] + @"' />
+//</div>";
+//            }
             
-        }
+//        }
 
-        return s;
-    }
+//        return s;
+//    }
     #endregion
 }

@@ -1015,11 +1015,11 @@
     <Content Include="css\images\road.png" />
     <Content Include="css\images\search_icon.png" />
     <Content Include="css\images\vcb.png" />
-    <Content Include="css\index.css" />
+    <Content Include="css\index__.css" />
     <Content Include="css\san-pham.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Images\a.png" />
+    <Content Include="css\images\a.png" />
     <Content Include="Images\blue.png" />
     <Content Include="Images\dau1.png" />
     <Content Include="Images\Picture3.png" />

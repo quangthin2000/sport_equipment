@@ -52,8 +52,8 @@ public partial class _Default : System.Web.UI.Page
             }
             #endregion
 
-            ltrLogo.Text = LayLogo();
-            ltrBanner.Text = LayBanner();
+            //ltrLogo.Text = LayLogo();
+            //ltrBanner.Text = LayBanner();
 
             ltrMenu.Text = LayMenu();
             ltrDanhMucSanPham.Text = LayDanhMucSanPham();
