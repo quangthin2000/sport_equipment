@@ -1,4 +1,4 @@
-﻿/using System;
+﻿using System;
 
 public partial class cms_admin_SanPham_QuanLyDonHang_Ajax_DonHang : System.Web.UI.Page
 {

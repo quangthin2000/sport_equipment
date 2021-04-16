@@ -1004,7 +1004,7 @@
     <Content Include="css\chi-tiet-san-pham.css" />
     <Content Include="css\dang-ky.css" />
     <Content Include="css\dang-nhap.css" />
-    <Content Include="css\gio-hang.css" />
+    <Content Include="css\giohang.css" />
     <Content Include="css\gioi-thieu.css" />
     <Content Include="css\images\akmasa.png" />
     <Content Include="css\images\dau1.png" />

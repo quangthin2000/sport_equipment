@@ -113,76 +113,76 @@ public partial class cms_display_SanPham_Ajax_XuLyGioHang : System.Web.UI.Page
                 case "ChuyenKhoan":
                     break;
               
-                case "Onepay":
-                    #region Chuyển sang trang Onepay
-                    string SECURE_SECRET = OnepayCode.SECURE_SECRET;//Hòa: cần thanh bằng mã thật cấu hình trong app_code
-                                                                    // Khoi tao lop thu vien va gan gia tri cac tham so gui sang cong thanh toan
-                    VPCRequest conn = new VPCRequest(OnepayCode.VPCRequest);//Hòa: Cần thay bằng cổng thật cấu hình trong app_code
-                    conn.SetSecureSecret(SECURE_SECRET);
-                    // Add the Digital Order Fields for the functionality you wish to use
-                    // Core Transaction Fields
-                    conn.AddDigitalOrderField("Title", "onepay paygate");
-                    conn.AddDigitalOrderField("vpc_Locale", "vn");//Chon ngon ngu hien thi tren cong thanh toan (vn/en)
-                    conn.AddDigitalOrderField("vpc_Version", "2");
-                    conn.AddDigitalOrderField("vpc_Command", "pay");
-                    conn.AddDigitalOrderField("vpc_Merchant", OnepayCode.Merchant);//Hòa: cần thanh bằng mã thật cấu hình trong app_code
-                    conn.AddDigitalOrderField("vpc_AccessCode", OnepayCode.AccessCode);//Hòa: cần thanh bằng mã thật cấu hình trong app_code
-                    conn.AddDigitalOrderField("vpc_MerchTxnRef", mathanhtoantructuyen);//Hòa: mã thanh toán
-                    conn.AddDigitalOrderField("vpc_OrderInfo", mathanhtoantructuyen);//Hòa: thông tin đơn hàng
-                    conn.AddDigitalOrderField("vpc_Amount", (tongTien * 100).ToString());//Hòa: chi phí cần nhân 100 theo yêu cầu của onepay
-                    conn.AddDigitalOrderField("vpc_Currency", "VND");
-                    conn.AddDigitalOrderField("vpc_ReturnURL", OnepayCode.ReturnURL);//Hòa: địa chỉ nhận kết quả trả về
-                                                                                     // Thong tin them ve khach hang. De trong neu khong co thong tin
-                    conn.AddDigitalOrderField("vpc_SHIP_Street01", "");
-                    conn.AddDigitalOrderField("vpc_SHIP_Provice", "");
-                    conn.AddDigitalOrderField("vpc_SHIP_City", "");
-                    conn.AddDigitalOrderField("vpc_SHIP_Country", "");
-                    conn.AddDigitalOrderField("vpc_Customer_Phone", "");
-                    conn.AddDigitalOrderField("vpc_Customer_Email", "");
-                    conn.AddDigitalOrderField("vpc_Customer_Id", "");
-                    // Dia chi IP cua khach hang
-                    conn.AddDigitalOrderField("vpc_TicketNo", Request.UserHostAddress);
-                    // Chuyen huong trinh duyet sang cong thanh toan
-                    String url = conn.Create3PartyQueryString();
-                    #endregion
+                //case "Onepay":
+                //    #region Chuyển sang trang Onepay
+                //    string SECURE_SECRET = OnepayCode.SECURE_SECRET;//Hòa: cần thanh bằng mã thật cấu hình trong app_code
+                //                                                    // Khoi tao lop thu vien va gan gia tri cac tham so gui sang cong thanh toan
+                //    VPCRequest conn = new VPCRequest(OnepayCode.VPCRequest);//Hòa: Cần thay bằng cổng thật cấu hình trong app_code
+                //    conn.SetSecureSecret(SECURE_SECRET);
+                //    // Add the Digital Order Fields for the functionality you wish to use
+                //    // Core Transaction Fields
+                //    conn.AddDigitalOrderField("Title", "onepay paygate");
+                //    conn.AddDigitalOrderField("vpc_Locale", "vn");//Chon ngon ngu hien thi tren cong thanh toan (vn/en)
+                //    conn.AddDigitalOrderField("vpc_Version", "2");
+                //    conn.AddDigitalOrderField("vpc_Command", "pay");
+                //    conn.AddDigitalOrderField("vpc_Merchant", OnepayCode.Merchant);//Hòa: cần thanh bằng mã thật cấu hình trong app_code
+                //    conn.AddDigitalOrderField("vpc_AccessCode", OnepayCode.AccessCode);//Hòa: cần thanh bằng mã thật cấu hình trong app_code
+                //    conn.AddDigitalOrderField("vpc_MerchTxnRef", mathanhtoantructuyen);//Hòa: mã thanh toán
+                //    conn.AddDigitalOrderField("vpc_OrderInfo", mathanhtoantructuyen);//Hòa: thông tin đơn hàng
+                //    conn.AddDigitalOrderField("vpc_Amount", (tongTien * 100).ToString());//Hòa: chi phí cần nhân 100 theo yêu cầu của onepay
+                //    conn.AddDigitalOrderField("vpc_Currency", "VND");
+                //    conn.AddDigitalOrderField("vpc_ReturnURL", OnepayCode.ReturnURL);//Hòa: địa chỉ nhận kết quả trả về
+                //                                                                     // Thong tin them ve khach hang. De trong neu khong co thong tin
+                //    conn.AddDigitalOrderField("vpc_SHIP_Street01", "");
+                //    conn.AddDigitalOrderField("vpc_SHIP_Provice", "");
+                //    conn.AddDigitalOrderField("vpc_SHIP_City", "");
+                //    conn.AddDigitalOrderField("vpc_SHIP_Country", "");
+                //    conn.AddDigitalOrderField("vpc_Customer_Phone", "");
+                //    conn.AddDigitalOrderField("vpc_Customer_Email", "");
+                //    conn.AddDigitalOrderField("vpc_Customer_Id", "");
+                //    // Dia chi IP cua khach hang
+                //    conn.AddDigitalOrderField("vpc_TicketNo", Request.UserHostAddress);
+                //    // Chuyen huong trinh duyet sang cong thanh toan
+                //    String url = conn.Create3PartyQueryString();
+                //    #endregion
                                         
-                    ketQua = url;
+                //    ketQua = url;
 
-                    break;
-                case "OnepayQuocTe":
-                    string SECURE_SECRET1 = OnepayQuocTeCode.SECURE_SECRET;//Hòa: cần thanh bằng mã thật cấu hình trong app_code; 
-                                                                           // Khoi tao lop thu vien va gan gia tri cac tham so gui sang cong thanh toan
-                    VPCRequest conn1 = new VPCRequest(OnepayQuocTeCode.VPCRequest);//Hòa: Cần thay bằng cổng thật
-                    conn1.SetSecureSecret(SECURE_SECRET1);
-                    // Add the Digital Order Fields for the functionality you wish to use
-                    // Core Transaction Fields
-                    conn1.AddDigitalOrderField("AgainLink", "http://onepay.vn");
-                    conn1.AddDigitalOrderField("Title", "onepay paygate");
-                    conn1.AddDigitalOrderField("vpc_Locale", "en");//Chon ngon ngu hien thi tren cong thanh toan (vn/en)
-                    conn1.AddDigitalOrderField("vpc_Version", "2");
-                    conn1.AddDigitalOrderField("vpc_Command", "pay");
-                    conn1.AddDigitalOrderField("vpc_Merchant", OnepayQuocTeCode.Merchant);//Hòa: cần thanh bằng mã thật cấu hình trong app_code
-                    conn1.AddDigitalOrderField("vpc_AccessCode", OnepayQuocTeCode.AccessCode);//Hòa: cần thanh bằng mã thật cấu hình trong app_code
-                    conn1.AddDigitalOrderField("vpc_MerchTxnRef", mathanhtoantructuyen);//Hòa: mã thanh toán
-                    conn1.AddDigitalOrderField("vpc_OrderInfo", mathanhtoantructuyen);//Hòa: mã thanh toán
-                    conn1.AddDigitalOrderField("vpc_Amount", (tongTien * 100).ToString());//Hòa: chi phí cần nhân 100 theo yêu cầu của onepay
+                //    break;
+                //case "OnepayQuocTe":
+                //    string SECURE_SECRET1 = OnepayQuocTeCode.SECURE_SECRET;//Hòa: cần thanh bằng mã thật cấu hình trong app_code; 
+                //                                                           // Khoi tao lop thu vien va gan gia tri cac tham so gui sang cong thanh toan
+                //    VPCRequest conn1 = new VPCRequest(OnepayQuocTeCode.VPCRequest);//Hòa: Cần thay bằng cổng thật
+                //    conn1.SetSecureSecret(SECURE_SECRET1);
+                //    // Add the Digital Order Fields for the functionality you wish to use
+                //    // Core Transaction Fields
+                //    conn1.AddDigitalOrderField("AgainLink", "http://onepay.vn");
+                //    conn1.AddDigitalOrderField("Title", "onepay paygate");
+                //    conn1.AddDigitalOrderField("vpc_Locale", "en");//Chon ngon ngu hien thi tren cong thanh toan (vn/en)
+                //    conn1.AddDigitalOrderField("vpc_Version", "2");
+                //    conn1.AddDigitalOrderField("vpc_Command", "pay");
+                //    conn1.AddDigitalOrderField("vpc_Merchant", OnepayQuocTeCode.Merchant);//Hòa: cần thanh bằng mã thật cấu hình trong app_code
+                //    conn1.AddDigitalOrderField("vpc_AccessCode", OnepayQuocTeCode.AccessCode);//Hòa: cần thanh bằng mã thật cấu hình trong app_code
+                //    conn1.AddDigitalOrderField("vpc_MerchTxnRef", mathanhtoantructuyen);//Hòa: mã thanh toán
+                //    conn1.AddDigitalOrderField("vpc_OrderInfo", mathanhtoantructuyen);//Hòa: mã thanh toán
+                //    conn1.AddDigitalOrderField("vpc_Amount", (tongTien * 100).ToString());//Hòa: chi phí cần nhân 100 theo yêu cầu của onepay
 
-                    conn1.AddDigitalOrderField("vpc_ReturnURL", OnepayQuocTeCode.ReturnURL);//Hòa: địa chỉ nhận kết quả trả về
-                                                                                            // Thong tin them ve khach hang. De trong neu khong co thong tin
-                    conn1.AddDigitalOrderField("vpc_SHIP_Street01", "");
-                    conn1.AddDigitalOrderField("vpc_SHIP_Provice", "");
-                    conn1.AddDigitalOrderField("vpc_SHIP_City", "");
-                    conn1.AddDigitalOrderField("vpc_SHIP_Country", "");
-                    conn1.AddDigitalOrderField("vpc_Customer_Phone", "");
-                    conn1.AddDigitalOrderField("vpc_Customer_Email", "");
-                    conn1.AddDigitalOrderField("vpc_Customer_Id", "");
-                    // Dia chi IP cua khach hang
-                    conn1.AddDigitalOrderField("vpc_TicketNo", Request.UserHostAddress);
-                    // Chuyen huong trinh duyet sang cong thanh toan
-                    String url1 = conn1.Create3PartyQueryString();
-                    ketQua = url1;
+                //    conn1.AddDigitalOrderField("vpc_ReturnURL", OnepayQuocTeCode.ReturnURL);//Hòa: địa chỉ nhận kết quả trả về
+                //                                                                            // Thong tin them ve khach hang. De trong neu khong co thong tin
+                //    conn1.AddDigitalOrderField("vpc_SHIP_Street01", "");
+                //    conn1.AddDigitalOrderField("vpc_SHIP_Provice", "");
+                //    conn1.AddDigitalOrderField("vpc_SHIP_City", "");
+                //    conn1.AddDigitalOrderField("vpc_SHIP_Country", "");
+                //    conn1.AddDigitalOrderField("vpc_Customer_Phone", "");
+                //    conn1.AddDigitalOrderField("vpc_Customer_Email", "");
+                //    conn1.AddDigitalOrderField("vpc_Customer_Id", "");
+                //    // Dia chi IP cua khach hang
+                //    conn1.AddDigitalOrderField("vpc_TicketNo", Request.UserHostAddress);
+                //    // Chuyen huong trinh duyet sang cong thanh toan
+                //    String url1 = conn1.Create3PartyQueryString();
+                //    ketQua = url1;
 
-                    break;
+                //    break;
             }
             #endregion
         }

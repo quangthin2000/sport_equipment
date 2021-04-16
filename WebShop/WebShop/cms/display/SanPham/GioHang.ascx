@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="GioHang.ascx.cs" Inherits="cms_display_SanPham_GioHang" %>
-<link href="css/gio-hang.css" rel="stylesheet" />
+<link href="css/giohang.css" rel="stylesheet" />
 <div class="modal-content">
     <div class="modal-header">
         <h4 class="modal-title" id="exampleModalLabel">Bạn có <span class="TongSoSPTrongGioHang">0</span> sản phẩm trong giỏ hàng.</h4>
@@ -58,10 +58,12 @@
                             <input id="tbHoTen" type="text" value="<%=hoTen %>"/>
                         </div>
                     </div>
+                    
                     <div class="cb"></div>
+                    </br>
                 </div>
             
-                <div class="row">
+                <div class="s">
                     <div class="col-lg-3">
                         <div class="modal-title-note">
                             Địa chỉ:
@@ -74,7 +76,6 @@
                     </div>
                     <div class="cb"></div>
                 </div>
-            
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="modal-title-note">
@@ -88,7 +89,6 @@
                     </div>
                     <div class="cb"></div>
                 </div>
-            
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="modal-title-note">
@@ -272,8 +272,8 @@
 
             var phuongthucthanhtoan = "";
             if ($("#rbChuyenKhoan").is(":checked")) phuongthucthanhtoan = "ChuyenKhoan";
-            if ($("#rbOnepay").is(":checked")) phuongthucthanhtoan = "Onepay";
-            if ($("#rbOnepayQuocTe").is(":checked")) phuongthucthanhtoan = "OnepayQuocTe";
+            //if ($("#rbOnepay").is(":checked")) phuongthucthanhtoan = "Onepay";
+            //if ($("#rbOnepayQuocTe").is(":checked")) phuongthucthanhtoan = "OnepayQuocTe";
 
             $.post("cms/display/SanPham/Ajax/XuLyGioHang.aspx",
                    {

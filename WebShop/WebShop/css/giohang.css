@@ -252,7 +252,7 @@ item input {
     padding-left: 50px;
 }
 .col-lg-4 {
-    width: 266px;
+    width: 400px;
     margin-left: 20px;
     float: left;
 }
@@ -350,3 +350,6 @@ input, button, select, textarea {
 #footer .contener{}
 .menufoter  {width: 400px;margin: auto;padding-top: 0px;} 
 
+.dienThongTinDonHang input[type=text]{width:100%}
+.dienThongTinDonHang .row{padding-bottom:10px}
+.dienThongTinDonHang .col-lg-4{width:480px}

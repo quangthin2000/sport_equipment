@@ -8,6 +8,18 @@
     <link href="cms/Admin/css/css_DangNhap.css" rel="stylesheet" />
 </head>
 <body>
+    <script>
+        // Execute a function when the user releases a key on the keyboard
+        document.addEventListener("keyup", function (event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                // Cancel the default action, if needed
+                event.preventDefault();
+                // Trigger the button element with a click
+                document.getElementById("lbtDangNhap").click();
+            }
+        });
+    </script>
     <form id="form1" runat="server">
         <div class="FormDangNhap">
         <div class="head">Đăng nhập hệ thống</div>
